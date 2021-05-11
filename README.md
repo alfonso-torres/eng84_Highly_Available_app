@@ -2,9 +2,13 @@
 
 Highly available systems are reliable in the sense that they continue operating even when critical components fail. They are also resilient, meaning that they are able to simply handle failure without service disruption or data loss, and seamlessly recover from such failure.
 
+A highly available application is one that can function properly when one or more of its components fail. It does not have a single point of failure, that is, when one component fails, the application can still deliver correct results.
+
 ### Diagram 1
 
 ![vault](./DIAGRAM.png)
+
+AWS scalability with load balancing 
 
 ### Diagram 2
 
@@ -20,13 +24,25 @@ __Multi az - app deployed to 2 or more zones:__
 
 Availabilty of our app -> Multi avalaiablaty zones, multi could environment. You can place instances in different AZs.
 
-Each Region has multiple, isolated locations known as Availability Zones. When you launch an instance, you can select an Availability Zone or let us choose one for you. If you distribute your instances across multiple Availability Zones and one instance fails, you can design your application so that an instance in another Availability Zone can handle requests.
+Each Region has multiple, isolated locations known as Availability Zones. When you launch an instance, you can select an Availability Zone or let us choose one for you. If you distribute your instances across multiple Availability Zones and one instance fails, you can design your application so that an instance in another Availability Zone can handle requests, so all the traffic will be redirected to the other machine in the other AZ.
 
 Customers who care about the availability and performance of their applications want to deploy these applications across multiple AZs in the same region for fault tolerance and low latency. AZs are connected to each other with fast, private fiber-optic networking, enabling you to easily architect applications that automatically fail-over between AZs without interruption.
 
 This ensures that customers avoid having a critical service dependency on a single data center. AWS can conduct maintenance activities without making any critical service temporarily unavailable to any customer.
 
 __Monitoring - Cloud Watch:__
+
+Have a look in the Diagram 2.
+
+Cloudwatch: monitoring system available in AWS.
+
+How it works?: Resources that use Cloud Watch or your custom data.
+
+What are the resources that we would like to monitor?: The instances. The entire infrastructure we will like to monitor it 24/7 attaching cloud watch.
+
+Why do we need to it?: we want to monitor, to help the CPU, memory, etc. So help to check metrics. I would like to notify when the CPU is >= 75%, bring an alarm, using SNS -> send an email. So we know the problem, and then start to auto scaling to meet the demand, need to spin up the same servers and have the metrics statistics available again to monitor that, so it will notify to the person who is responsible and put that again on the interface (console, AWS Management Console). It costs money. In the instances, we have the tab `Monitoring`, where we have the metrics available. Then you create a status check and then fix the problem.
+
+What is the benefit of monitoring the traffic?: Your monitor your expensives, so you don't lose your money. We manage costs. FOR THE BUSINESS.
 
 Amazon CloudWatch is a monitoring and management service that provides data and actionable insights for AWS, hybrid, and on-premises applications and infrastructure resources. With CloudWatch, you can collect and access all your performance and operational data in form of logs and metrics from a single platform. This allows you to overcome the challenge of monitoring individual systems and applications in silos (server, network, database, etc.). CloudWatch enables you to monitor your complete stack (applications, infrastructure, and services) and leverage alarms, logs, and events data to take automated actions and reduce Mean Time to Resolution (MTTR). This frees up important resources and allows you to focus on building applications and business value.
 
@@ -41,6 +57,8 @@ You can use metrics to calculate statistics and then present the data graphicall
 You can configure alarm actions to stop, start, or terminate an Amazon EC2 instance when certain criteria are met. In addition, you can create alarms that initiate Amazon EC2 Auto Scaling and Amazon Simple Notification Service (Amazon SNS) actions on your behalf.
 
 Monitors instance metrics. Monitoring system for AWS resources. For example, send notifications when load is at 70%.
+
+AWS Cloud computing resources are housed in highly available data center facilities. To provide additional scalability and reliability, each data center facility is located in a specific geographical area, known as a Region.
 
 __Load balancing - app load balancer, network load balancer:__
 
@@ -104,6 +122,8 @@ Use auto-scaling to detect when loads increase, and then dynamically add more in
 
 Auto scaling spins up the instances based on the current demand to optimise performance.
 
+AWS Auto Scaling lets you build scaling plans that automate how groups of different resources respond to changes in demand. You can optimize availability, costs, or a balance of both. AWS Auto Scaling automatically creates all of the scaling policies and sets targets for you based on your preference.
+
 - Vertical Scaling - increasing the size of instance (RAM, CPU, etc.).
 
 - Horizontal Scaling - add more instances (replication).
@@ -121,6 +141,8 @@ You can also optionally enable Amazon EC2 Auto Scaling to replace instances in y
 Amazon EC2 Auto Scaling can determine the health status of an instance using one or more of the following:
 
 - Status checks provided by Amazon EC2 to identify hardware and software issues that may impair an instance. 
+
+- Your custom health checks.
 
 _Questions:_
 
