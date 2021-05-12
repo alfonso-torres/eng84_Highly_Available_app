@@ -34,9 +34,9 @@ __Monitoring - Cloud Watch:__
 
 Have a look in the diagram.
 
-Cloudwatch: monitoring system available in AWS.
+_Cloudwatch: monitoring system available in AWS._
 
-How it works?: Resources that use Cloud Watch or your custom data.
+- How it works?: Resources that use Cloud Watch or your custom data.
 
 What are the resources that we would like to monitor?: The instances. The entire infrastructure we will like to monitor it 24/7 attaching cloud watch.
 
@@ -72,7 +72,7 @@ Elastic Load Balancing automatically distributes incoming application traffic ac
 
 If one of these instances is experiencing heavy loads, traffic can be redirected to the others.
 
-The benefits:
+_The benefits:_
 
 - Highly available: Elastic Load Balancing automatically distributes incoming traffic across multiple targets—Amazon EC2 instances, containers, IP addresses, and Lambda functions—in multiple AZs and ensures only healthy targets receive traffic. The Amazon Elastic Load Balancing Service Level Agreement commitment is 99.99% availability for a load balancer.
 
@@ -139,7 +139,7 @@ _- Gateway Load Balancer:_
 
 Distributes traffic to a fleet of appliance instances, providing scale, availability, and simplicity for third-party virtual appliances, such as firewalls, intrusion detection and prevention systems, and other appliances. Gateway Load Balancers work with virtual appliances that support the GENEVE protocol. Additional technical integration is required, so make sure that you consult the user guide before choosing a Gateway Load Balancer.
 
-_Combination of ALD and NLD:_
+_Combination of ALB and NLB:_
 
 ![COMB_BALANCER](./app_network_load_balancer.png)
 
@@ -229,7 +229,7 @@ AWS Auto Scaling monitors your applications and automatically adjusts capacity t
 
 4. Pay Only for What You Need: AWS Auto Scaling can help you optimize your utilization and cost efficiencies when consuming AWS services so you only pay for the resources you actually need. When demand drops, AWS Auto Scaling will automatically remove any excess resource capacity so you avoid overspending.
 
-- Auto Scaling with Load Balancing:
+_- Auto Scaling with Load Balancing:_
 
 To use Elastic Load Balancing with your Auto Scaling group, you attach the load balancer to your Auto Scaling group to register the group with the load balancer. Your load balancer acts as a single point of contact for all incoming web traffic to your Auto Scaling group.
 
