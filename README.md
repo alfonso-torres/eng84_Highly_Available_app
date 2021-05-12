@@ -16,7 +16,7 @@ AWS scalability with load balancing
 
 ### Concepts:
 
-__Multi az - app deployed to 2 or more zones:__
+## Multi az - app deployed to 2 or more zones:
 
 ![MULTI_AZ](./AZ.png)
 
@@ -28,7 +28,15 @@ Customers who care about the availability and performance of their applications 
 
 This ensures that customers avoid having a critical service dependency on a single data center. AWS can conduct maintenance activities without making any critical service temporarily unavailable to any customer.
 
-__Monitoring - Cloud Watch:__
+Amazon operates state-of-the-art, highly-available data centers.
+
+_- Benefits:_
+
+These Availability Zones offer you the ability to operate production applications and databases that are more highly available, fault tolerant, and scalable than would be possible from a single data center.
+
+Who is using these services?: Amazon cloud computing resources are hosted in multiple locations world-wide. These locations are composed of AWS Regions, Availability Zones, and Local Zones. By using Local Zones, you can place resources, such as compute and storage, in multiple locations closer to your users. Amazon RDS enables you to place resources, such as DB instances, and data in multiple locations. Resources aren't replicated across AWS Regions unless you do so specifically. Any company that wants to have an application with high availability, make sure that it is always running, in case one server fails, another can work in another area.
+
+## Monitoring - Cloud Watch:
 
 ![CLOUD](./diagram_cloud_watch.png)
 
@@ -60,7 +68,21 @@ Monitors instance metrics. Monitoring system for AWS resources. For example, sen
 
 AWS Cloud computing resources are housed in highly available data center facilities. To provide additional scalability and reliability, each data center facility is located in a specific geographical area, known as a Region.
 
-__Load balancing - app load balancer, network load balancer, classic load balancer:__
+_- Benefits:_
+
+1. Observability on a single platform across applications and infrastructure: Modern applications such as those running on microservices architectures generate large volumes of data in the form of metrics, logs, and events. Amazon CloudWatch enables you to collect, access, and correlate this data on a single platform from across all your AWS resources.
+
+2. Easiest way to collect metrics in AWS and on-premises: Monitoring your AWS resources and applications is easy with CloudWatch.
+
+3. Improve operational performance and resource optimization: Amazon CloudWatch enables you to set alarms and automate actions based on either predefined thresholds, or on machine learning algorithms that identify anomalous behavior in your metrics.
+
+4. Get operational visibility and insight: To optimize performance and resource utilization, you need a unified operational view, real-time granular data, and historical reference.
+
+5. Basic Monitoring: It offers you basic monitoring with seven metrics at the five- minute frequency for free.
+
+Who is using these services?: Anyone who wants to monitor their equipment to ensure the load of them and that they are working correctly before they fall or if they fall can start another.
+
+## Load balancing - app load balancer, network load balancer, classic load balancer:
 
 ![BALANCER](./elastic_load_balancer.png)
 
@@ -143,7 +165,7 @@ _Combination of ALB and NLB:_
 
 ![COMB_BALANCER](./app_network_load_balancer.png)
 
-__SNS (alarms 65/70%) Simple Notification Service:__
+## SNS (alarms 65/70%) Simple Notification Service:
 
 ![SNS](./sns.png)
 
@@ -155,7 +177,7 @@ We want to make it even easier for developers to build highly functional and arc
 
 Provices notificacions when an order is placed, or an instance is experiencing heavy load.
 
-__Health checks CPU usage etc:__
+## Health checks CPU usage etc:
 
 ![HEALTH](./Health_checks.png)
 
@@ -169,7 +191,7 @@ The health status of an Auto Scaling instance is either healthy or unhealthy. Al
 
 After Amazon EC2 Auto Scaling marks an instance as unhealthy, it is scheduled for replacement. If you do not want instances to be replaced, you can suspend the health check process for any individual Auto Scaling group. 
 
-__Route 53 DNS service:__
+## Route 53 DNS service:
 
 ![ROUTE](./Route_53.png)
 
@@ -199,7 +221,7 @@ _Route 53 with ELB:_
 
 ![COMB_R_ELB](./route_elb.png)
 
-__Auto-scaling horizontal and vertical scaling:__
+## Auto-scaling horizontal and vertical scaling:
 
 ![SCALING](./auto_scaling.png)
 
@@ -267,7 +289,7 @@ When you scale up, you already invested money into buying larger servers and whe
 
 Scale-up does not suit a long-term strategy since the capacity of the servers will be upgraded to the threshold of their performance. The scale-out approach allows you to scale the architecture in the long-term. 
 
-_Questions:_
+__Questions:__
 
 1. What is our job role?: Make sure the app is running all the time.
 
