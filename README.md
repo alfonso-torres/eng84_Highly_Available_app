@@ -4,6 +4,16 @@ Highly available systems are reliable in the sense that they continue operating 
 
 A highly available application is one that can function properly when one or more of its components fail. It does not have a single point of failure, that is, when one component fails, the application can still deliver correct results.
 
+### Table of Contents
+
+- [Multi AZ](#multi-az---app-deployed-to-2-or-more-zones)
+- [Cloud Watch](#monitoring---cloud-watch)
+- [Load Balancing](#load-balancing---app-load-balancer-network-load-balancer-classic-load-balancer)
+- [SNS (alarms)](#sns-simple-notification-service)
+- [Health checks](#health-checks-cpu-usage)
+- [Route 53](#route-53-dns-service)
+- [Auto-scaling horizontal and vertical](#autoscaling-horizontal-and-vertical)
+
 ### Diagram 1
 
 ![SCHEME](./DIAGRAM.png)
@@ -16,7 +26,7 @@ AWS scalability with load balancing
 
 ### Concepts:
 
-## Multi az - app deployed to 2 or more zones:
+## Multi az - app deployed to 2 or more zones
 
 ![MULTI_AZ](./AZ.png)
 
@@ -36,7 +46,7 @@ These Availability Zones offer you the ability to operate production application
 
 Who is using these services?: Amazon cloud computing resources are hosted in multiple locations world-wide. These locations are composed of AWS Regions, Availability Zones, and Local Zones. By using Local Zones, you can place resources, such as compute and storage, in multiple locations closer to your users. Amazon RDS enables you to place resources, such as DB instances, and data in multiple locations. Resources aren't replicated across AWS Regions unless you do so specifically. Any company that wants to have an application with high availability, make sure that it is always running, in case one server fails, another can work in another area.
 
-## Monitoring - Cloud Watch:
+## Monitoring - Cloud Watch
 
 ![CLOUD](./diagram_cloud_watch.png)
 
@@ -82,7 +92,7 @@ _- Benefits:_
 
 Who is using these services?: Anyone who wants to monitor their equipment to ensure the load of them and that they are working correctly before they fall or if they fall can start another.
 
-## Load balancing - app load balancer, network load balancer, classic load balancer:
+## Load balancing - app load balancer, network load balancer, classic load balancer
 
 ![BALANCER](./elastic_load_balancer.png)
 
@@ -165,7 +175,7 @@ _Combination of ALB and NLB:_
 
 ![COMB_BALANCER](./app_network_load_balancer.png)
 
-## SNS (alarms 65/70%) Simple Notification Service:
+## SNS (alarms 65/70%) Simple Notification Service
 
 ![SNS](./sns.png)
 
@@ -177,7 +187,7 @@ We want to make it even easier for developers to build highly functional and arc
 
 Provices notificacions when an order is placed, or an instance is experiencing heavy load.
 
-## Health checks CPU usage etc:
+## Health checks CPU usage (etc)
 
 ![HEALTH](./Health_checks.png)
 
@@ -191,7 +201,7 @@ The health status of an Auto Scaling instance is either healthy or unhealthy. Al
 
 After Amazon EC2 Auto Scaling marks an instance as unhealthy, it is scheduled for replacement. If you do not want instances to be replaced, you can suspend the health check process for any individual Auto Scaling group. 
 
-## Route 53 DNS service:
+## Route 53 DNS service
 
 ![ROUTE](./Route_53.png)
 
@@ -221,7 +231,7 @@ _Route 53 with ELB:_
 
 ![COMB_R_ELB](./route_elb.png)
 
-## Auto-scaling horizontal and vertical scaling:
+## Auto-scaling horizontal and vertical
 
 ![SCALING](./auto_scaling.png)
 
