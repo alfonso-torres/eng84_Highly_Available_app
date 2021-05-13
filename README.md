@@ -348,4 +348,4 @@ Scaling:
 
 WE HAVE TO MAKE SURE THAT THE APP IS RUNNING -> CUSTOMER SATISFACTION.
 
-[Link](https://github.com/alfonso-torres/eng84_Terraform) to implement the creation of auto scaling groups and application load balancer with terraform as well as create VPCs, subnets, security groups and start the application.
+[Link](https://github.com/alfonso-torres/eng84_auto_scaling_AWS_Terraform) to implement the creation of auto scaling groups and application load balancer with terraform as well as create VPCs, subnets, security groups and start the application.
